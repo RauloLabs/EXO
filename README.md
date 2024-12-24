@@ -30,4 +30,14 @@ Once connected to EXO PowerShell, the procedure exports all configuration inform
 
 ![image](https://github.com/user-attachments/assets/76b801c6-81c1-422e-a118-b518246fc5f4)
 
-
+### How to import all information collected and work with it:
+The collector repository will contain a txt file with the execution date and many xml file with current configuration, you can import those to a variable an make different PS queries:
+```powershell
+$VarETR = Import-Clixml .\Cloud_ETR.xml
+```
+To view the information you have many options, bellow some examples:
+```powershell
+$VarETR | Sort-Object Name -Descending | ft 
+$VarETR | Where-Object {$_.State -like '*Enabled*'} | ft
+```
+![image](https://github.com/user-attachments/assets/2bdd18a5-5ff3-45ef-8711-72dc7e105efc)
