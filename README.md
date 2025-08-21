@@ -41,3 +41,11 @@ $VarETR | Sort-Object Name -Descending | ft
 $VarETR | Where-Object {$_.State -like '*Enabled*'} | ft
 ```
 ![image](https://github.com/user-attachments/assets/2bdd18a5-5ff3-45ef-8711-72dc7e105efc)
+
+
+# TLS not present
+This script help to evidence sender that doesn't use TLS in EXo with Oportunistic TLS, based on (to enter in deep details):  
+https://learn.microsoft.com/en-us/exchange/monitoring/mail-flow-reports/mfr-inbound-messages-and-outbound-messages-reports
+
+
+
