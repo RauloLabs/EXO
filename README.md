@@ -44,8 +44,16 @@ $VarETR | Where-Object {$_.State -like '*Enabled*'} | ft
 
 
 # TLS not present
-This script help to evidence sender that doesn't use TLS in EXo with Oportunistic TLS, based on (to enter in deep details):  
+This script (TLSSenderCheck.ps1) help to evidence sender that doesn't use TLS in EXo with Oportunistic TLS, based on (to enter in deep details):  
 https://learn.microsoft.com/en-us/exchange/monitoring/mail-flow-reports/mfr-inbound-messages-and-outbound-messages-reports
+
+Before to start, rename with your domain this line:
+Line 22>>>>> $externalDomain = "@yourdomain.com"  #Add your domain here
+
+If the script finds some user will be inform with this following message waring and sale a log on current execution folder (TLSLog_2025-08-21.csv)
+
+<img width="807" height="273" alt="image" src="https://github.com/user-attachments/assets/f0cbf9e3-9b60-4af5-a1b6-d40a2a53d217" />
+
 
 
 
