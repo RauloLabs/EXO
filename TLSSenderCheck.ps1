@@ -19,7 +19,7 @@ $endDate = Get-Date
 $traceResults = Get-MessageTrace -StartDate $startDate -EndDate $endDate
 
 # Filtra solo i messaggi esterni (mittente o destinatario non nel dominio interno)
-$externalDomain = "@rnmst1.com"  #Add your domain here
+$externalDomain = "@test.com"  #Add your domain here
 $externalMessages = $traceResults | Where-Object {
     ($_.SenderAddress -notlike "*$externalDomain") -or
     ($_.RecipientAddress -notlike "*$externalDomain")
@@ -58,4 +58,5 @@ foreach ($msg in $externalMessages) {
     #Write-Host "####################################################################"
      #   $filteredDetails | Select-Object Timestamp, Event, Data | Fl
     #Write-Host "####################################################################"
+
 }
