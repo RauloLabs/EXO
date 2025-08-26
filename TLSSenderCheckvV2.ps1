@@ -1,4 +1,3 @@
-
 #=================================
 # By Raul N, Microsoft Ltd. 2025. Use at your own risk.  No warranties are given.
 #
@@ -15,7 +14,16 @@
 #$internalDomains = @("contoso.com", "rnmst1.com")
 
 # Prompt user to enter internal domains manually
+Write-Host "##########################################################################"
 $domainInput = Read-Host "Enter your internal domains separated by commas (e.g., contoso.com,test.com)"
+
+# Line 2: Loop until a valid domain is entered
+while ([string]::IsNullOrWhiteSpace($domainInput)) {
+    Write-Host "Warning"-ForegroundColor Yellow
+    $domainInput = Read-Host "Warning: Please enter a domain" 
+}
+
+
 $internalDomains = $domainInput.Split(",") | ForEach-Object { $_.Trim() }
 
 # Display the domains for confirmation
@@ -61,7 +69,7 @@ foreach ($msg in $externalReceives) {
     foreach ($event in $receiveEvents) {
          Write-Host "###################################################################"
         Write-Host "Analizzando TraceId: $($msg.MessageId) - Sender: $($msg.SenderAddress)"
-        if ($data -match "TLS") {
+        if ($data -like "*TLS*") {
             Write-Host "TLS is present for MessageId $($msg.MessageId)" -ForegroundColor Green
             Write-Host "Sender $($msg.SenderAddress)" 
             #Write-Host $data
@@ -82,5 +90,3 @@ foreach ($msg in $externalReceives) {
 
 
 ########################################################################################################
-
-
