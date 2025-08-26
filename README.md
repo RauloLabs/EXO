@@ -45,17 +45,19 @@ $VarETR | Where-Object {$_.State -like '*Enabled*'} | ft
 =======================================================================
 
 # TLS not present
-This script (TLSSenderCheck.ps1) help to evidence sender that doesn't use TLS in EXo with Oportunistic TLS, based on (to enter in deep details):  
+This script (TLSSenderCheckV2.ps1) help to evidence sender that doesn't use TLS in EXo with Oportunistic TLS, based on (to enter in deep details):  
 https://learn.microsoft.com/en-us/exchange/monitoring/mail-flow-reports/mfr-inbound-messages-and-outbound-messages-reports
 
 <img width="802" height="270" alt="image" src="https://github.com/user-attachments/assets/c8da42be-f440-4060-8a84-d66763c021f7" />
 
-Before to start, rename with your domain this line:
-Line 22>>>>> $externalDomain = "@yourdomain.com"  #Add your domain here
+Before to start, enter your tenants domain/s after execute it to ignore internal emails:
 
-If the script finds some user will be inform with this following message waring and sale a log on current execution folder (TLSLog_2025-08-21.csv)
+<img width="565" height="108" alt="image" src="https://github.com/user-attachments/assets/80c6dba8-680a-4ce4-b9f5-916da20a5cec" />
 
-<img width="807" height="273" alt="image" src="https://github.com/user-attachments/assets/f0cbf9e3-9b60-4af5-a1b6-d40a2a53d217" />
+If the script finds some user will be inform with this following message waring and sale a log on current execution folder (TLSLogX_2025-08-21.csv)
+
+<img width="982" height="94" alt="image" src="https://github.com/user-attachments/assets/dbefcec5-5bc4-427d-a53e-bf7c5b5be717" />
+
 
 
 
