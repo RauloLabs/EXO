@@ -50,13 +50,24 @@ https://learn.microsoft.com/en-us/exchange/monitoring/mail-flow-reports/mfr-inbo
 
 <img width="802" height="270" alt="image" src="https://github.com/user-attachments/assets/c8da42be-f440-4060-8a84-d66763c021f7" />
 
-Before to start, enter your tenants domain/s after execute it to ignore internal emails:
+### How to ue this script?
+
+1.Download the script (TLSSenderCheckV2.ps1). 
+
+<img width="1051" height="119" alt="image" src="https://github.com/user-attachments/assets/6b3453f3-7983-4d88-97d0-a5c2030d1c12" />
+
+2.Connect to exchange Online using PowerShell (Admin user or Transport Role able to run Get-messagetracev2):
+```powershell
+Connect-ExchangeOnline -UserPrincipalName chris@contoso.com
+```
+3.Execute the script: Before starting, enter your tenants domain/s (accepted domains) after execute it to ignore internal emails:
 
 <img width="565" height="108" alt="image" src="https://github.com/user-attachments/assets/80c6dba8-680a-4ce4-b9f5-916da20a5cec" />
 
-If the script finds some user will be inform with this following message waring and sale a log on current execution folder (TLSLogX_2025-08-21.csv)
+If the script finds some user will be informed with this following message waring (In Yellow) and sale a log on current execution folder (TLSLogX_<<Date>>.csv)
 
 <img width="982" height="94" alt="image" src="https://github.com/user-attachments/assets/dbefcec5-5bc4-427d-a53e-bf7c5b5be717" />
+
 
 
 
