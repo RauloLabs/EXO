@@ -66,7 +66,7 @@ Connect-ExchangeOnline -UserPrincipalName chris@contoso.com
 
 If the script finds some user will be informed with this following message waring (In Yellow) and sale a log on current execution folder (TLSLogX_//Date//.csv)
 
-<img width="982" height="94" alt="image" src="https://github.com/user-attachments/assets/dbefcec5-5bc4-427d-a53e-bf7c5b5be717" />
+<img width="861" height="85" alt="image" src="https://github.com/user-attachments/assets/823ed0e4-1aa7-483d-bea2-80072f515681" />
 
 ### Exampled:
 
