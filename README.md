@@ -64,9 +64,13 @@ Connect-ExchangeOnline -UserPrincipalName chris@contoso.com
 
 <img width="565" height="108" alt="image" src="https://github.com/user-attachments/assets/80c6dba8-680a-4ce4-b9f5-916da20a5cec" />
 
-If the script finds some user will be informed with this following message waring (In Yellow) and sale a log on current execution folder (TLSLogX_<<Date>>.csv)
+If the script finds some user will be informed with this following message waring (In Yellow) and sale a log on current execution folder (TLSLogX_//Date//.csv)
 
 <img width="982" height="94" alt="image" src="https://github.com/user-attachments/assets/dbefcec5-5bc4-427d-a53e-bf7c5b5be717" />
+
+### Exampled:
+
+<img width="985" height="352" alt="image" src="https://github.com/user-attachments/assets/82ecf619-e852-4613-bc73-ae0c5936cdf2" />
 
 
 
